@@ -3,7 +3,7 @@ import os
 from optimizely_config_manager import OptimizelyConfigManager
 from twilio.rest import TwilioRestClient
 
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 TWILIO_ACCOUNT_SID = "<account_sid>"
 TWILIO_AUTH_TOKEN = "<auth_token>"
@@ -13,14 +13,14 @@ OPTIMIZELY_PROJECT_ID = '<project_id>'
 
 client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-application = Flask(__name__)
+application = Flask(__name__, static_folder='assets')
 application.secret_key = os.urandom(24)
 
 config_manager = OptimizelyConfigManager(OPTIMIZELY_PROJECT_ID)
 
 @application.route('/')
 def hello_world():
-  return 'Hello!'
+  return render_template('index.html')
 
 # process inbound sms message
 @application.route('/sms', methods=['GET', 'POST'])
