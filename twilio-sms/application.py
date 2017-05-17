@@ -33,20 +33,20 @@ def sms():
     variation_key = config_manager.get_obj().activate('<experiment_key>', from_number)
 
     if variation_key == 'question':
-      send_sms("Hello! Do you want to view the code from this demo app? If so, respond with Yes", from_number)
+      send_sms("Hello! Want to learn how to create this same experiment Optimizely Full Stack and Twilio? If so, respond with Yes", from_number)
 
     if variation_key == 'suggestion':
-      send_sms("Hello! You should view the code from this demo. If so, respond with Yes", from_number)
+      send_sms("Hello! To learn more about Full Stack, we recommend checking out a sample app we built. Want to learn more? If so, respond with Yes", from_number)
 
     if variation_key == 'aggressive':
-      send_sms("Hello, DON\'T MISS OUT! View the code from this demo now. If so, respond with Yes", from_number)
+      send_sms("Hello, Did you know that avocados (persea americana), are not a vegetable, but a fruit. Technically avocados are classified as a large berry with a single seed. Additionally, in 2013 Mexico (the worlds largest producer of avocados) produced over 3 billion pounds of the fruit. If you want to learn more about this demo, respond with Yes.", from_number)
 
   elif message == 'no':
-    send_sms('Thank you for your response. No conversion event logged.', from_number)
+    send_sms('Thank you for your response. No Full Stack conversion event logged. We hope you enjoyed this demo!', from_number)
 
   elif message == 'yes':
     config_manager.get_obj().track('<track_event>', from_number)
-    send_sms("Here's the GitHub repo. Hope you enjoyed this demo. http://bit.ly/2o3CSoK", from_number)
+    send_sms("Here's the GitHub repo. We hope you enjoyed this demo and are inspired to build your next app with Optimizely Full Stack. http://bit.ly/2o3CSoK", from_number)
 
   else:
     send_sms("Invalid command. Please respond with 'Hello' to start!", from_number)
