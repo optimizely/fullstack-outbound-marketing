@@ -1,7 +1,7 @@
 import os
 
 from optimizely_config_manager import OptimizelyConfigManager
-from twilio.rest import TwilioRestClient
+from twilio.rest import Client
 
 from flask import Flask, request, render_template
 
@@ -11,7 +11,7 @@ FROM_NUMBER = '<from_number>'
 
 OPTIMIZELY_PROJECT_ID = '<project_id>'
 
-client = TwilioRestClient(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
+client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
 application = Flask(__name__, static_folder='assets')
 application.secret_key = os.urandom(24)
