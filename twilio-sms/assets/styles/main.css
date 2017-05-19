@@ -1,0 +1,84 @@
+body {
+  font-family: Proxima, Helvetica, Verdana, sans-serif;
+}
+
+.number{
+  color: #fff;
+  cursor: default !important;
+}
+
+#content{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+}
+
+.number:hover{
+  color: #fff;
+  text-decoration: none;
+}
+
+.sms__container {
+  background: #f7f7f7; 
+  margin-top: 2em; 
+  color: #000;
+  padding: 2em 0;
+}
+
+.variation--title {
+ text-align: center;
+}
+
+.variation--img {
+  height: 500px;
+  width: auto;
+  margin: auto;
+}
+
+.get-started__container{
+  padding: 4em 0;
+  background-color: #00415d;
+}
+
+.button {
+    background-color: transparent;
+    border-color: #0074B4;
+    box-sizing: content-box;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    line-height: 32px;
+    border-style: solid;
+    border-radius: 5px;
+    color: #fff !important;
+    font-family: Proxima,Helvetica,sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+    width: 50%;
+  }
+
+.get-started-cta{
+  margin-bottom: 2em;
+}
+
+.get-started-cta > h3 {
+  font-weight: lighter;
+}
+
+.red-btn:hover{
+  background-color: #F06A5A;
+}
+
+.green-btn:hover{
+  background-color: #55B84D;
+}
+
+.blue-btn:hover{
+  background-color: #84CDCB;
+}
