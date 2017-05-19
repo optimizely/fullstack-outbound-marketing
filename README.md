@@ -2,7 +2,7 @@
 
 This repo houses outbound marketing demos for Optimizely X Full Stack.
 
-To start, we've added a Twilio demo app showcasing A/B testing SMS messages. 
+To start, we've added a Twilio demo app showcasing A/B testing SMS messages. Give it a try using the number below!
 
 Questions? Shoot us an email at developers@optimizely.com
 
